@@ -8,11 +8,7 @@ const Home: React.FC = () => {
     const getTasks = () => {
         const storedValues = localStorage.getItem('tasks');
         if(!storedValues)
-            return {
-                id: '',
-                title: '',
-                isCompleted: '',
-            };
+            return [];
         return JSON.parse(storedValues);
     }
 
